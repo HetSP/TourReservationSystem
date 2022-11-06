@@ -10,11 +10,13 @@ const initialState = {
   tdescription: "",
   price: "",
   tnumber: "",
+  image: "",
 
   tnameerror: "",
   tdescriptionerror: "",
   priceerror: "",
   tnumbererror: "",
+  imageerror:"",
 
   username: "",
 };
@@ -35,6 +37,7 @@ class Tours extends React.Component {
     let tdescriptionerror = "";
     let priceerror = "";
     let tnumbererror = "";
+    let imageerror="";
 
     if (!this.state.tname) {
       tnameerror = "This field is required";
@@ -49,13 +52,17 @@ class Tours extends React.Component {
     if (!this.state.tnumber) {
       tnumbererror = "This field is required";
     }
+    if (!this.state.image) {
+      imageerror = "This field is required";
+    }
 
-    if (tnameerror || tdescriptionerror || priceerror || tnumbererror) {
+    if (tnameerror || tdescriptionerror || priceerror || tnumbererror || imageerror) {
       this.setState({
         tnameerror,
         tdescriptionerror,
         priceerror,
         tnumbererror,
+        imageerror,
       });
       return false;
     }
@@ -70,6 +77,7 @@ class Tours extends React.Component {
       console.log(this.state.tdescription);
       console.log(this.state.price);
       console.log(this.state.tnumber);
+      console.log(this.state.image);
 
       //clear form
       this.setState(initialState);
@@ -79,7 +87,8 @@ class Tours extends React.Component {
       this.state.tname == null &&
       this.state.tdescription == null &&
       this.state.price == null &&
-      this.state.tnumber == null
+      this.state.tnumber == null &&
+      this.state.image == null
     ) {
       return alert("Cannot submit empty fields");
     }
@@ -94,6 +103,7 @@ class Tours extends React.Component {
         tdescription: this.state.tdescription,
         price: this.state.price,
         tnumber: this.state.tnumber,
+        image:this.state.image,
       }),
     })
       .then(function (callback) {
@@ -108,6 +118,7 @@ class Tours extends React.Component {
       tdescription: "",
       price: "",
       tnumber: "",
+      image: "",
     });
   };
 
@@ -146,7 +157,7 @@ class Tours extends React.Component {
           </div>
 
           <div className="container text-center mt-3">
-            <form onSubmit={this.onSubmitHandler}>
+            <form onSubmit={this.onSubmitHandler} enctype="multipart/form-data">
               <div className="form-group">
                 <label className="text-left">
                   <i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;Tour
@@ -221,6 +232,24 @@ class Tours extends React.Component {
                 />
                 <div style={{ fontSize: 12, color: "red" }}>
                   {this.state.tnumbererror}
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="exampleInputPassword1">
+                  <i class="fa fa-image" aria-hidden="true"></i>&nbsp;Tour Image
+                </label>
+                <input
+                  name="image"
+                  onChange={this.onChangeHandler}
+                  type="text"
+                  placeholder="Tour Image"
+                  className="form-control"
+                  value={this.state.image}
+                  required
+                />
+                <div style={{ fontSize: 12, color: "red" }}>
+                  {this.state.imageerror}
                 </div>
               </div>
 

@@ -12,6 +12,7 @@ class Edit extends Component {
       tdescription: "",
       price: "",
       tnumber: "",
+      image: "",
     };
   }
 
@@ -43,6 +44,7 @@ class Edit extends Component {
         tname: "",
         tdescription: "",
         price: "",
+        image: "",
       }),
     })
       .then((callback) => callback.json())
@@ -53,6 +55,7 @@ class Edit extends Component {
             tdescription: callbackJson[0].tdescription,
             price: callbackJson[0].price,
             tnumber: callbackJson[0].tnumber,
+            image: callbackJson[0].image,
           },
           function () {}
         );
@@ -86,7 +89,7 @@ class Edit extends Component {
     });
 
     fetch("http://localhost:5000/view/delete", {
-      method: "POST",
+      method: "DELETE",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -96,6 +99,7 @@ class Edit extends Component {
         tname: "",
         tdescription: "",
         price: "",
+        image: "",
       }),
     })
       .then((callback) => callback.json())
@@ -109,6 +113,7 @@ class Edit extends Component {
       tdescription: "",
       price: "",
       tnumber: "",
+      image: "",
     });
   };
 
@@ -118,16 +123,17 @@ class Edit extends Component {
       return alert("Please specify the package number");
     }
     fetch("http://localhost:5000/view/update", {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
-        tnname: this.state.tname,
+        tname: this.state.tname,
         tdescription: this.state.tdescription,
         price: this.state.price,
         tnumber: this.state.tnumber,
+        image: this.state.image,
       }),
     })
       .then((callback) => callback.json())
@@ -143,6 +149,7 @@ class Edit extends Component {
       tdescription: "",
       price: "",
       tnumber: "",
+      image: "",
     });
   };
 
@@ -235,13 +242,28 @@ class Edit extends Component {
                 <i class="fa fa-money" aria-hidden="true"></i>&nbsp;Tour Price
               </label>
               <input
-                name="tprice"
+                name="price"
                 onChange={this.onChangeHandler}
                 type="text"
                 className="form-control"
-                value={this.state.tprice}
+                value={this.state.price}
                 required
               />
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="exampleInputPassword1">
+                  <i class="fa fa-image" aria-hidden="true"></i>&nbsp;Tour Image
+                </label>
+                <input
+                  name="image"
+                  onChange={this.onChangeHandler}
+                  type="text"
+                  placeholder="Tour Image"
+                  className="form-control"
+                  value={this.state.image}
+                  required
+                />
             </div>
             <br></br>
             <br></br>

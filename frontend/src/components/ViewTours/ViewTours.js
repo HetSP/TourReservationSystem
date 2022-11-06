@@ -38,12 +38,12 @@ export class ViewTours extends Component {
           {this.state.tours.map((value, key) => (
             <div className="card" key={key}>
               <img
-                src="https://i.pinimg.com/originals/54/2c/7e/542c7e0c990d70f3e732b8a9cf64815f.png"
+                src={value.image}
                 className="card-img-top"
               />
               <div className="card-body">
                 <h5 className="card-title">{value.tname}</h5>
-                <p className="card-text justufy">{value.tdescription}</p>
+                <p className="card-text justify">{value.tdescription}</p>
                 <br />
                 <p className="card-text mb-0 p-8">
                   <b>Price: </b>

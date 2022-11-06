@@ -18,6 +18,7 @@ router.post("/", async (req, res) => {
     tdescription: req.body.tdescription,
     price: req.body.price,
     tnumber: req.body.tnumber,
+    image: req.body.image,
   });
   try {
     const savedView = await view.save();
@@ -37,21 +38,25 @@ router.post("/search", async (req, res) => {
   }
 });
 
-router.post("/delete", async (req, res) => {
+router.delete("/delete", async (req, res) => {
   console.log(req.body);
+  let returnObject = {};
   try {
-    const deleteView = await User.deleteOne({ tnumber: req.body.tnumber });
-    res.json(deleteView);
+    const deleteView = await View.deleteOne({ tnumber: req.body.tnumber });
+    //res.json(deleteView);
+    returnObject = deleteView;
     console.log(searchView);
   } catch (err) {
-    res.json({ message: err });
+    //res.json({ message: err });
+    returnObject = {message : err};
   }
+  return returnObject;
 });
 
-router.post("/update", async (req, res) => {
+router.patch("/update", async (req, res) => {
   console.log(req.body);
   try {
-    const updateView = await User.updateOne(
+    const updateView = await View.updateOne(
       { tnumber: req.body.tnumber },
       {
         $set: {
@@ -59,7 +64,7 @@ router.post("/update", async (req, res) => {
           price: req.body.price,
           tdescription: req.body.tdescription,
           tnumber: req.body.tnumber,
-     
+          image: req.body.image,
         },
       }
     );

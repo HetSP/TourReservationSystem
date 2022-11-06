@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
-
 const app = express();
 
 //Define the port
@@ -50,6 +49,7 @@ mongoose
     console.log(error);
   });
 
+  
 app.listen(port, () => {
   console.log("Server Started on port ", port);
 });
