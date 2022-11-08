@@ -8,6 +8,7 @@ import Add from "../Add/Add";
 import Tours from "../Tours/Tours";
 import Edit from "../Edit/Edit";
 import ViewTours from "../ViewTours//ViewTours";
+import ViewUsers from "../ViewUsers/ViewUsers";
 
 import {
   BrowserRouter as Router,
@@ -53,6 +54,8 @@ export default class MyHome extends Component {
             <Route path="/edit" exact component={Edit}></Route>
 
             <Route path="/view" exact component={ViewTours}></Route>
+
+            <Route path="/users" exact component={ViewUsers}></Route>
 
             <PrivateRoute path="/tours" exact component={Tours} loggedIn={function(){console.log(localStorage.getItem('authToken')); if(localStorage.getItem('authToken')){return true}else{return false}}}></PrivateRoute>
 

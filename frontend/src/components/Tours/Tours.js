@@ -137,8 +137,13 @@ class Tours extends React.Component {
     return (
       <div className="container">
         <Link to="/edit">
-          <button className="btn btn-outline-danger ml-2">
+          <button className="btn btn-outline-danger ml-2 mr-1">
             <i className="fa fa-trash-o"></i>&nbsp; Upadate/Delete Tour Packages
+          </button>
+        </Link>
+        <Link to="/users">
+          <button className="btn btn-outline-info ml-2 mr-1">
+            <i className="fa fa-user"></i>&nbsp; Show Users
           </button>
         </Link>
         <form onSubmit={this.formSubmitHandler}>

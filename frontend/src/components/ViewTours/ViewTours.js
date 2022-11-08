@@ -43,7 +43,7 @@ export class ViewTours extends Component {
               />
               <div className="card-body">
                 <h5 className="card-title">{value.tname}</h5>
-                <p className="card-text justify">{value.tdescription}</p>
+                <p className="card-text justufy">{value.tdescription}</p>
                 <br />
                 <p className="card-text mb-0 p-8">
                   <b>Price: </b>
