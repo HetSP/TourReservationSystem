@@ -43,13 +43,8 @@ class Navbar extends Component {
           <div className="r"></div>
           <div className="navbar-buttons ml-auto">
             <Link to="/login">
-              <button className="btn btn-outline-danger mr-2" type="submit">
+              <button className="btn btn-outline-primary mr-2" type="submit">
                 <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Login
-              </button>
-            </Link>
-            <Link to="/dashboard">
-              <button className="btn btn-outline-warning mr-2" type="submit">
-                <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; AboutUs
               </button>
             </Link>
             <Link to="/home">
@@ -57,28 +52,25 @@ class Navbar extends Component {
                 <i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home
               </button>
             </Link>
-
+            <Link to="/dashboard">
+              <button className="btn btn-outline-warning mr-2" type="submit">
+                <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; AboutUs
+              </button>
+            </Link>
             <Link to="/contact">
               <button className="btn btn-outline-light mr-2" type="submit">
                 <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; ContactUs
               </button>
             </Link>
 
-            <Link to="/add">
-              <button className="btn btn-outline-info mr-2" type="submit">
-                <i class="fa fa-tag" aria-hidden="true"></i>&nbsp;
-                TourReservation
-              </button>
-            </Link>
-
             <Link to="/view">
-              <button className="btn btn-outline-success mr-2" type="submit">
+              <button className="btn btn-outline-info mr-2" type="submit">
                 <i class="fa fa-car" aria-hidden="true"></i>&nbsp; TourPackages
               </button>
             </Link>
 
             <button
-              className="btn btn-outline-warning mr-2"
+              className="btn btn-outline-danger mr-2"
               type="submit"
               onClick={() => this.logout()}
             >

@@ -14,6 +14,10 @@ const UsersSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    quantity: {
+      type: Number,
+      required: true,
+    },
     address: {
       type: String,
       required: true,
@@ -22,6 +26,13 @@ const UsersSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    gender: {
+      type: String,
+      required: true,
+    },
+    tourname:{
+      type: String,
+    }
   },
   { collection: "UserDetails" }
 );

@@ -143,7 +143,12 @@ class Tours extends React.Component {
         </Link>
         <Link to="/users">
           <button className="btn btn-outline-info ml-2 mr-1">
-            <i className="fa fa-user"></i>&nbsp; Show Users
+            <i className="fa fa-plane"></i>&nbsp; Show Tour Bookings
+          </button>
+        </Link>
+        <Link to="/signup">
+          <button className="btn btn-outline-success ml-2 mr-1">
+            <i className="fa fa-user"></i>&nbsp; Show Admins
           </button>
         </Link>
         <form onSubmit={this.formSubmitHandler}>

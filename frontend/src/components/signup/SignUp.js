@@ -1,35 +1,34 @@
 import React, { Component } from "react";
-import "./ViewUsers.css";
+import "./signupStyles.css";
 import { Link } from "react-router-dom";
 
-export class ViewUsers extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [],
+      admins: [],
     };
   }
 
   async componentDidMount() {
-    return fetch("http://localhost:5000/users")
+    return fetch("http://localhost:5000/signup")
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson);
         this.setState({
-          users: responseJson,
+          admins: responseJson,
         });
       })
       .catch((error) => {
         console.error(error);
       });
   }
-
   render() {
     return (
       <div className={"container"}>
         <br></br>
         <div className={"justify-content-center"}>
-          <h1 className="rr">Bookings</h1>
+          <h1 className="rr">Admins</h1>
         </div>
         <br></br>
         <br></br>
@@ -41,24 +40,14 @@ export class ViewUsers extends Component {
                 <th scope="col">#</th>
                 <th scope="col">name</th>
                 <th scope="col">email</th>
-                <th scope="col">phone</th>
-                <th scope="col">Members</th>
-                <th scope="col">country</th>
-                <th scope="col">gender</th>
-                <th scope="col">tourname</th>
               </tr>
             </thead>
-            {this.state.users.map((value, key) => (
+            {this.state.admins.map((value, key) => (
               <tbody>
                 <tr>
                   <th scope="row">{key + 1}</th>
-                  <td>{value.name}</td>
-                  <td>{value.email}</td>
-                  <td>{value.phone}</td>
-                  <td>{value.quantity}</td>
-                  <td>{value.country}</td>
-                  <td>{value.gender}</td>
-                  <td>{value.tourname}</td>
+                  <td>{value.userName}</td>
+                  <td>{value.userEmail}</td>
                 </tr>
               </tbody>
             ))}
@@ -74,4 +63,4 @@ export class ViewUsers extends Component {
   }
 }
 
-export default ViewUsers;
+export default SignUp;

@@ -29,7 +29,7 @@ class Contact extends Component {
               {" "}
               <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Phone Number
               <br></br>
-              <br></br>+91 112 426916 / +91 112 426907{" "}
+              <br></br>+910123456789 / +919876543210{" "}
             </h5>
             <br></br>
             <h5>

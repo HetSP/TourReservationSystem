@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./DashboardStyles.css";
-import loader from "./loader.gif";
 import iceland from "./IceLand.jpg";
 import seashore from "./SeaShore.jpg";
 import vof from "./ValleyOfFlowers.jpg";

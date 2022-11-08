@@ -8,19 +8,25 @@ const initialState = {
   name: "",
   email: "",
   phone: "",
+  quantity: null,
   address: "",
   country: "",
   gender: "",
+  tourname: "",
 
   nameerror: "",
   emailerror: "",
   phoneerror: "",
+  quantityerror: "",
   addresserror: "",
   countryerror: "",
   gendererror: "",
 };
 
 class Add extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   state = initialState;
 
   onChangeHandler = (e) => {
@@ -35,6 +41,7 @@ class Add extends React.Component {
     let nameerror = "";
     let emailerror = "";
     let phoneerror = "";
+    let quantityerror = "";
     let addresserror = "";
     let countryerror = "";
     let gendererror = "";
@@ -48,6 +55,9 @@ class Add extends React.Component {
     }
     if (!this.state.phone) {
       phoneerror = "Enter Phone Number";
+    }
+    if (!this.state.quantity) {
+      quantityerror = "Enter Quantity";
     }
     if (!this.state.address) {
       addresserror = "Enter User Address";
@@ -63,6 +73,7 @@ class Add extends React.Component {
       nameerror ||
       emailerror ||
       phoneerror ||
+      quantityerror ||
       addresserror ||
       countryerror ||
       gendererror
@@ -71,6 +82,7 @@ class Add extends React.Component {
         nameerror,
         emailerror,
         phoneerror,
+        quantityerror,
         addresserror,
         countryerror,
         gendererror,
@@ -87,6 +99,7 @@ class Add extends React.Component {
       console.log(this.state.name);
       console.log(this.state.email);
       console.log(this.state.phone);
+      console.log(this.state.quantity);
       console.log(this.state.address);
       console.log(this.state.country);
       console.log(this.state.gender);
@@ -99,6 +112,7 @@ class Add extends React.Component {
       this.state.name == null &&
       this.state.email == null &&
       this.state.phone == null &&
+      this.state.quantity == null &&
       this.state.address == null &&
       this.state.country == null &&
       this.state.gender == null
@@ -115,9 +129,11 @@ class Add extends React.Component {
         name: this.state.name,
         email: this.state.email,
         phone: this.state.phone,
+        quantity: this.state.quantity,
         address: this.state.address,
         country: this.state.country,
-        gender: this.state.gender
+        gender: this.state.gender,
+        tourname: this.props.match.params.name,
       }),
     })
       .then(function (callback) {
@@ -131,6 +147,7 @@ class Add extends React.Component {
       name: "",
       email: "",
       phone: "",
+      quantity: null,
       address: "",
       country: "",
       gender: "",
@@ -215,6 +232,24 @@ class Add extends React.Component {
 
               <div className="form-group">
                 <label htmlFor="exampleInputPassword1">
+                  <i class="fa fa-hashtag" aria-hidden="true"></i>&nbsp;No of Members
+                </label>
+                <input
+                  name="quantity"
+                  onChange={this.onChangeHandler}
+                  type="number"
+                  placeholder="Enter Number>0"
+                  className="form-control"
+                  value={this.state.quantity}
+                  required
+                />
+                <div style={{ fontSize: 12, color: "red" }}>
+                  {this.state.quantityerror}
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="exampleInputPassword1">
                   <i class="fa fa-address-card" aria-hidden="true"></i>
                   &nbsp;Address
                 </label>
@@ -266,6 +301,20 @@ class Add extends React.Component {
                 <div style={{ fontSize: 12, color: "red" }}>
                   {this.state.gendererror}
                 </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="exampleInputPassword1">
+                  <i class="fa fa-plane" aria-hidden="true"></i>&nbsp;Tour Name
+                </label>
+                <input
+                  name="tourname"
+                  type="text"
+                  className="form-control"
+                  value={this.props.match.params.name}
+                  readOnly
+                />
+                
               </div>
 
               <br></br>
