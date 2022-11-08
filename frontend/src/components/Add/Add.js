@@ -272,13 +272,13 @@ class Add extends React.Component {
               <br></br>
               <div className="form-group">
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-outline-danger"
                   onClick={this.onSubmitHandler}
                 >
                   <i className="fa fa-send"></i>&nbsp; Submit
                 </button>
                 <Link to="/home">
-                  <button className="btn btn-info ml-2">
+                  <button className="btn btn-outline-info ml-2">
                     <i className="fa fa-arrow-left"></i>&nbsp; Back to Home Page
                   </button>
                 </Link>

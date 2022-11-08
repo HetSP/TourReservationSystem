@@ -55,7 +55,7 @@ export class ViewTours extends Component {
                 </p>
                 <Link to="/add">
                 <div class="text-center">
-                  <a href="#" class="btn btn-primary">
+                  <a href="#" class="btn btn-outline-primary">
                     Book Now
                   </a>
                 </div>

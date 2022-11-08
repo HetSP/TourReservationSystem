@@ -268,14 +268,14 @@ class Edit extends Component {
             <br></br>
             <br></br>
             <div className="form-group">
-              <button className="btn btn-warning" onClick={this.update}>
+              <button className="btn btn-outline-warning" onClick={this.update}>
                 <i className="fa fa-edit"></i>&nbsp; Update
               </button>
-              <button className="btn btn-danger ml-2" onClick={this.delete}>
+              <button className="btn btn-outline-danger ml-2" onClick={this.delete}>
                 <i className="fa fa-trash"></i>&nbsp; Delete
               </button>
               <Link to="/tours">
-                <button className="btn btn-info ml-2">
+                <button className="btn btn-outline-info ml-2">
                   <i className="fa fa-arrow-left"></i>&nbsp; Back to Add Tour
                   Packages
                 </button>

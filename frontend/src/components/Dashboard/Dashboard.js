@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./DashboardStyles.css";
 import loader from "./loader.gif";
-import sigiriya from "./sigiriya.jpg";
-import sigiriya2 from "./sigiriya2.jpg";
-import sigiriya3 from "./sigiriya3.jpg";
+import iceland from "./IceLand.jpg";
+import seashore from "./SeaShore.jpg";
+import vof from "./ValleyOfFlowers.jpg";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
             <h1 className="d">About Us</h1>
             <br></br>
             <div className="container text-center">
-              <img src={sigiriya}></img>
+              <img src={iceland} width={800} height={500}></img>
             </div>
             <br></br>
             <br></br>
@@ -45,7 +45,7 @@ class Dashboard extends Component {
               <br></br>
               <br></br>
               <div className="container text-center">
-                <img src={sigiriya2}></img>
+                <img src={seashore} width={800} height={500}></img>
               </div>
               <br></br>
               <br></br>
@@ -63,11 +63,11 @@ class Dashboard extends Component {
               <br></br>
               <br></br>
               <div className="container text-center">
-                <img src={sigiriya3}></img>
+                <img src={vof} width={800} height={500}></img>
               </div>
               <br></br>
               In October 2007 the Tourism Act No 38 of 2005 came into effect.
-              With the circulation of the new Tourism act, the Sri Lanka Tourist
+              With the circulation of the new Tourism act, the india Tourist
               Board Act No 10 of 1966, which was in effect for the past 41
               years, was replaced.
               <br></br>
@@ -75,11 +75,11 @@ class Dashboard extends Component {
               In terms of the provisions contained in the new act, the Tourism
               Development Fund was legally constituted, with 2 main sources
               remitting finances to the fund. By way of 1/3 of the Airport Tax
-              collections and 1% of the Turnover of all Sri Lanka Tourist Board
+              collections and 1% of the Turnover of all india Tourist Board
               registered establishments. The Act provided for the setting up of
-              the Sri Lanka Tourism Development Authority, Sri Lanka Promotions
-              Bureau, Sri Lanka Convention Bureau and Sri Lanka Institute of
-              Hotel Management, thereby replacing the Sri Lanka Tourist Board.
+              the india Tourism Development Authority, india Promotions
+              Bureau, india Convention Bureau and india Institute of
+              Hotel Management, thereby replacing the india Tourist Board.
             </p>
             <br></br>
           </div>

@@ -14,8 +14,18 @@
 .card{
   width: 18rem;
   border: 2px solid black;
-  margin-left: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
 }
 .justufy{
   text-align: justify;
+}
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+  box-shadow: 5px 5px 20px rgb(55, 62, 69);
+}
+.card-image{
+  background-size: cover;
 }

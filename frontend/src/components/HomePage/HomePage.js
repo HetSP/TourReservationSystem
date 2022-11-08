@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import "./HomePageStyles.css";
 import airport from "./airport.png";
-import image1 from "./image1.jpg";
-import image2 from "./image2.jpg";
+import tajmahal from "./TajMahal.jpg";
+import thecolosseum from "./TheColosseum.jpg";
+import machupicchu from "./MachuPicchu.jpg";
+import petra from "./Petra.jpg";
+import ctrs from "./ChristtheRedeemerStatue.jpg";
+import gwoc from "./GreatWallofChina.jpg";
+import ci from "./ChichénItzá.jpg";
 
 export class HomePage extends Component {
   constructor(props) {
@@ -23,88 +28,96 @@ export class HomePage extends Component {
         </div>
         <br></br>
         <div className="container text-left">
-          <h2>Is it safe to travel to Sri Lanka?</h2>
+          <h2>Travel is the only thing you buy that makes you Richer</h2>
           <br></br>
+          <br></br>
+          <h3>Seven Wonders of the World</h3>
           <p>
-            As you know, Sri Lanka is one of the most satisfying countries to
-            travel to in South Asia. But as everyone knows, Sri Lanka had a
-            terrible time past days due to terrorist attacks. But fortunately,
-            the Sri Lankan government was able to stop their activities totally
-            within two weeks. Still, the harm they did to Sri Lanka is caused to
-            reduce the monthly visitors’ amount so severely. From this article,
-            you will know that are you safe to travel to Sri Lanka these days.
+          The world is full of beautiful buildings, some of which are so exceptional that they have been designated as the new Seven Wonders of the World. Here is a list of some of the world’s most impressive buildings, including the Taj Mahal in Agra, India, The Great Wall of China in Beijing, The Christ the Redeemer Statue in Rio de Janeiro, Machu Picchu in Peru, Chichen Itza in Mexico’s Yucatan Peninsula, The Roman Colosseum in Rome, and Petra (Jordan). The campaign to select the new seven wonders was started in 2000 by the Swiss foundation 7 Wonders. In 2007, these seven were announced as the winners, and the whole list was made public. Since Philo of Byzantium categorized the first “Seven Wonders of the World” in 250 B.C., simply referring to the “Seven Wonders” is no longer explicit enough for an audience to comprehend the framework.
           </p>
+          <h5>1.Taj Mahal</h5>
         </div>
         <br></br>
         <div className="container text-center">
-          <img src={image1}></img>
+          <img src={tajmahal} width={800} height={480}></img>
         </div>
         <br></br>
         <div className="container text-left">
-          <h2>
-            Sri Lanka government has expanded the safety of Sri Lankans and
-            especially foreigners
-          </h2>
-          <br></br>
           <p>
-            It’s been six years since we have defeat terrorism from Sri Lanka.
-            But unfortunately, Sri Lanka had to face another most crucial moment
-            again by terrorist attacks. But fortunately, the former president
-            Maithripala Sirisena allows the military forces to take control of
-            everything by giving them full power to defend against them, and the
-            military authorities did their job very well. And after the hardest
-            time, Again Sri Lanka back to the normal as previous days and you
-            are most welcome to travel around anywhere.
+          Agra, India’s Taj Mahal is a marble mausoleum complex and one of the best examples of Mughal architecture. Shah Jahan (reigned 1628–58) built it in memory of his wife Mumtz Maal, known as “Chosen One of the Palace,” who passed away in 1631 while giving birth to their 14th child. It is thought that 20,000 artisans worked on the Taj Mahal project under the direction of a board of architects who were knowledgeable at the time.
           </p>
-        </div>
-
-        <div className="container text-left">
-          <h2>The extra layer of security</h2>
           <br></br>
-          <p>
-            If you are a person who already visits Sri Lanka, you will see
-            something has changed. Nowadays, you can see each public places
-            covered up with Army forces to provide the maximum security for
-            everyone. So you really don’t need to worry about safety anymore.
-            Just have to enjoy your vacation.
-          </p>
-        </div>
-
-        <div className="container text-left">
-          <h2>Locals are delighted to help foreigners more than ever</h2>
-          <br></br>
-          <p>
-            Every Sri Lankans know what happened to Sri Lankan’s tourism
-            industry after the attack. So they want to get into that position
-            that they were previously attained and wanted to develop the tourism
-            industry more than ever. So when you arrived in Sri Lanka and
-            willing to get help from a Sri Lankan, you have to ask, or they will
-            help before you asked. That makes you feel good.
-          </p>
+          <h5>2.The Colosseum</h5>
         </div>
         <br></br>
         <div className="container text-center">
-          <img src={image2}></img>
+          <img src={thecolosseum} width={800} height={480}></img>
         </div>
         <br></br>
 
         <div className="container text-left">
-          <h2>
-            The opinion of some foreign travelers about the current situation in
-            Sri Lanka
-          </h2>
+          <p>The Flavian Amphitheatre usually referred to as the Colosseum or Coliseum, is a spectacular amphitheatre that was constructed in Rome and inaugurated in AD. 80 by Titus, the son of Vespasian, for a hundred days of games that included gladiatorial battles and animal contests. Despite the fact that two-thirds of the original structure has been damaged over time, it is one of the most well-known tourist locations.</p>
           <br></br>
+          <h5>3.Machu Picchu</h5>
+        </div>
+        <br></br>
+        <div className="container text-center">
+          <img src={machupicchu} width={800} height={480}></img>
+        </div>
+        <br></br>
+
+        <div className="container text-left">
+          <p>An Incan site in Peru called Machu Picchu was “found” by Hiram Bingham in 1911. It is close to the city of Cuzco. Vilcabamba, a covert Incan bastion used during the 16th-century revolt against Spanish domination, was what he thought it to be. It is one of the few recognized big pre-Columbian ruins that have been found almost intact.</p>
+          <br></br>
+          <h5>4.Petra</h5>
+        </div>
+        <br></br>
+        <div className="container text-center">
+          <img src={petra} width={800} height={480}></img>
+        </div>
+        <br></br>
+
+        <div className="container text-left">
           <p>
-            If you still confused about your travel plan to Sri Lanka, these
-            living proofs will make you feel so good. Harald Baldr: Harald Baldr
-            is a Youtuber/traveler who has recently visited Sri Lanka and
-            explain the current situation of the country by traveling so many
-            places around Sri Lanka. And his YouTube channel contains vlogs he
-            created when he was going around this beautiful country Sri Lanka.
-            You can see their vlogs on YouTube about the current situation, and
-            there are so many on YouTube from the foreigner who visited Sri
-            Lanka recently. feel free to check.
+          Petra is a remarkable historical and archaeological city in southern Jordan. It is also known as Raqmu or Rose City due to its colour. The Nabataean, a Bedouin Arab tribe that were native to the area in what is now southwest Jordan, are thought to have founded the city of Petra as a trade centre. Petra is situated around 150 miles south of Jerusalem and Amman, the capital of Jordan, and roughly halfway between Damascus, Syria, and the Red Sea, making it a centre of commerce in the region at the time.
           </p>
+          <br></br>
+          <h5>5.Cristo Redentor (OR) Christ the Redeemer Statue</h5>
+        </div>
+        <br></br>
+        <div className="container text-center">
+          <img src={ctrs} width={800} height={480}></img>
+        </div>
+        <br></br>
+        <div className="container text-left">
+          <p>
+          On Mount Corcovado in Rio de Janeiro, the Christ the Redeemer Statue, also known as Cristo Redentor, is a statue of Jesus in the Art Deco style. Heitor da Silva Costa designed the 130-foot statue, which is made of reinforced concrete and soapstone. Its construction cost about $250,000, the majority of which was obtained through contributions. It is 635 tonnes in weight and is situated on the Peak of Corcovado Mountain in the Tijuca Forest National Park, which provides views of Rio de Janeiro.
+          </p>
+          <br></br>
+          <h5>6.Great Wall of China</h5>
+        </div>
+        <br></br>
+        <div className="container text-center">
+          <img src={gwoc} width={800} height={480}></img>
+        </div>
+        <br></br>
+        <div className="container text-left">
+          <p>
+          The Great Wall of China is a work of engineering that is believed to be roughly 5,500 miles (8,850 km) long, however the Chinese claim it is actually 13,170 kilometres long (21,200 km). The Great Wall of China was built over the course of two millennia, starting in the 7th century BCE. The goals of this spectacular organisation at the time included management of trade and emigration, border control, imposition of tariffs on Silk Road trade, and defence.
+          </p>
+          <br></br>
+          <h5>7.Chichén Itzá</h5>
+        </div>
+        <br></br>
+        <div className="container text-center">
+          <img src={ci} width={800} height={480}></img>
+        </div>
+        <br></br>
+        <div className="container text-left">
+          <p>
+          A Mayan metropolis in Mexico is called Chichen Itza. It is located on the Yucatán Peninsula, which had great prosperity in the ninth and tenth centuries A.D. The mythological great cities, or Tollans, that are mentioned in later Mesoamerican literature are also thought to include Chichen Itza. The city’s ruins contain religious structures from the Maya Civilization, like as the Temple of Kukulkán, which has 365 steps, one for each day of the Haab solar calendar.
+          </p>
+          <br></br>
         </div>
 
         <br></br>
