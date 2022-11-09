@@ -53,7 +53,7 @@ export class ViewTours extends Component {
                   <b>Package No: </b>
                   {value.tnumber}
                 </p>
-                <Link to={`/add/${value.tname}`}>
+                <Link to={`/add/${value.tname}/${value.price}`}>
                 <div class="text-center">
                   <a href="#" class="btn btn-outline-primary">
                     Book Now

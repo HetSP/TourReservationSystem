@@ -35,7 +35,7 @@ export default class MyHome extends Component {
 
             <Route path="/contact" exact component={Contact}></Route>
 
-            <Route path="/add/:name" exact component={Add}></Route>
+            <Route path="/add/:name/:price" exact component={Add}></Route>
 
             {/* <PrivateRoute path="/dashboard">
               <AuthButton />

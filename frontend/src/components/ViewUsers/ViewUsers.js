@@ -46,6 +46,7 @@ export class ViewUsers extends Component {
                 <th scope="col">country</th>
                 <th scope="col">gender</th>
                 <th scope="col">tourname</th>
+                <th scope="col">tourprice</th>
               </tr>
             </thead>
             {this.state.users.map((value, key) => (
@@ -59,6 +60,7 @@ export class ViewUsers extends Component {
                   <td>{value.country}</td>
                   <td>{value.gender}</td>
                   <td>{value.tourname}</td>
+                  <td>{value.price}</td>
                 </tr>
               </tbody>
             ))}

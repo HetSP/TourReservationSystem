@@ -18,10 +18,6 @@ const UsersSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
-    address: {
-      type: String,
-      required: true,
-    },
     country: {
       type: String,
       required: true,
@@ -32,7 +28,10 @@ const UsersSchema = mongoose.Schema(
     },
     tourname:{
       type: String,
-    }
+    },
+    price:{
+      type: String,
+    },
   },
   { collection: "UserDetails" }
 );

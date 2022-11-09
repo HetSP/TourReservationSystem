@@ -9,16 +9,15 @@ const initialState = {
   email: "",
   phone: "",
   quantity: null,
-  address: "",
   country: "",
   gender: "",
   tourname: "",
+  price: "",
 
   nameerror: "",
   emailerror: "",
   phoneerror: "",
   quantityerror: "",
-  addresserror: "",
   countryerror: "",
   gendererror: "",
 };
@@ -42,7 +41,6 @@ class Add extends React.Component {
     let emailerror = "";
     let phoneerror = "";
     let quantityerror = "";
-    let addresserror = "";
     let countryerror = "";
     let gendererror = "";
 
@@ -59,9 +57,6 @@ class Add extends React.Component {
     if (!this.state.quantity) {
       quantityerror = "Enter Quantity";
     }
-    if (!this.state.address) {
-      addresserror = "Enter User Address";
-    }
     if (!this.state.country) {
       countryerror = "Enter Country Name";
     }
@@ -74,7 +69,6 @@ class Add extends React.Component {
       emailerror ||
       phoneerror ||
       quantityerror ||
-      addresserror ||
       countryerror ||
       gendererror
     ) {
@@ -83,7 +77,6 @@ class Add extends React.Component {
         emailerror,
         phoneerror,
         quantityerror,
-        addresserror,
         countryerror,
         gendererror,
       });
@@ -100,7 +93,6 @@ class Add extends React.Component {
       console.log(this.state.email);
       console.log(this.state.phone);
       console.log(this.state.quantity);
-      console.log(this.state.address);
       console.log(this.state.country);
       console.log(this.state.gender);
 
@@ -113,7 +105,6 @@ class Add extends React.Component {
       this.state.email == null &&
       this.state.phone == null &&
       this.state.quantity == null &&
-      this.state.address == null &&
       this.state.country == null &&
       this.state.gender == null
     ) {
@@ -130,10 +121,10 @@ class Add extends React.Component {
         email: this.state.email,
         phone: this.state.phone,
         quantity: this.state.quantity,
-        address: this.state.address,
         country: this.state.country,
         gender: this.state.gender,
         tourname: this.props.match.params.name,
+        price: this.props.match.params.price,
       }),
     })
       .then(function (callback) {
@@ -147,8 +138,7 @@ class Add extends React.Component {
       name: "",
       email: "",
       phone: "",
-      quantity: null,
-      address: "",
+      quantity: 0,
       country: "",
       gender: "",
     });
@@ -250,25 +240,6 @@ class Add extends React.Component {
 
               <div className="form-group">
                 <label htmlFor="exampleInputPassword1">
-                  <i class="fa fa-address-card" aria-hidden="true"></i>
-                  &nbsp;Address
-                </label>
-                <input
-                  name="address"
-                  onChange={this.onChangeHandler}
-                  type="text"
-                  placeholder="Address"
-                  className="form-control"
-                  value={this.state.address}
-                  required
-                />
-                <div style={{ fontSize: 12, color: "red" }}>
-                  {this.state.addresserror}
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="exampleInputPassword1">
                   <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;Country
                 </label>
                 <input
@@ -314,9 +285,20 @@ class Add extends React.Component {
                   value={this.props.match.params.name}
                   readOnly
                 />
-                
               </div>
 
+              <div className="form-group">
+                <label htmlFor="exampleInputPassword1">
+                  <i class="fa fa-money" aria-hidden="true"></i>&nbsp;Tour Price
+                </label>
+                <input
+                  name="price"
+                  type="text"
+                  className="form-control"
+                  value={this.props.match.params.price}
+                  readOnly
+                />
+              </div>
               <br></br>
               <br></br>
               <div className="form-group">
